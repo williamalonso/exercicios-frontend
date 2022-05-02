@@ -1,6 +1,8 @@
 <!-- 
   Neste exercício foi feito um modal utilizando Bootstrap 5. Neste modal, foi feito um scroll da página no sentido vertical, além de alterar a cor de fundo da página para "rgba(0,0,0,.8)" quando o modal é aberto.
   Seria feito também um scroll para quando fechar o modal, ele retornar ao botão de acionamento, porém ele já possui esse funcionamento normalmente.
+
+  Ao clicar no modal o vídeo é iniciado automaticamente, e quando o modal é fechado, o vídeo é pausado.
 -->
 
 <!doctype html>
@@ -40,6 +42,18 @@
       }
       #id-iframe {
         width: 100%;
+        height: 100%;
+      }
+      .modal-dialog {
+        max-width: 800px;
+      }
+      .modal-content {
+        height: 400px;
+        width: 800px;
+      }
+      .modal-body {
+        width: 100%;
+        padding: 0px;
       }
     </style>
 
@@ -59,17 +73,11 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <!-- <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div> -->
+          
           <div class="modal-body">
             <iframe src="https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" id="id-iframe" allowfullscreen></iframe>
           </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
+          
         </div>
       </div>
     </div>
@@ -140,15 +148,22 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!-- Jquery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   </body>
 
   <script>
-    
-    var modal = document.getElementById("exampleModal");
-    var btnModal = document.getElementById("btn-modal");
-    var iframe = document.getElementById("id-iframe");
 
-        
+    // essa função dá autoplay no iframe quando o modal for aberto
+    $("#exampleModal").on('shown.bs.modal', function (e) {
+      $("#exampleModal iframe").attr("src", "https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1&mute=0&autoplay=1");
+    });
+
+    // essa função serve para o video dar pause quando fechar janela do modal
+    $("#exampleModal").on('hidden.bs.modal', function (e) {
+      $("#exampleModal iframe").attr("src", "https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1&mute=1&autoplay=0");
+    });
       
   </script>
 
