@@ -160,10 +160,20 @@
       $("#exampleModal iframe").attr("src", "https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1&mute=0&autoplay=1");
     });
 
+    // mesma função desta acima escrita em Js
+      // document.getElementById("exampleModal").addEventListener('shown.bs.modal', function(e) {
+      //   document.getElementById("id-iframe").setAttribute("src", "https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1&mute=0&autoplay=1");
+      // });
+
     // essa função serve para o video dar pause quando fechar janela do modal
     $("#exampleModal").on('hidden.bs.modal', function (e) {
       $("#exampleModal iframe").attr("src", "https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1&mute=1&autoplay=0");
     });
+
+    // mesma função desta acima escrita em Js
+      // document.getElementById("exampleModal").addEventListener('hidden.bs.modal', function(e) {
+      //   document.getElementById("id-iframe").setAttribute("src", "https://www.youtube.com/embed/lqhFoVRRf1Y?controls=1&mute=1&autoplay=0");
+      // });
       
   </script>
 
