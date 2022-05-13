@@ -1,0 +1,114 @@
+<!--
+    Neste exercício foi utilizado uma biblioteca do Jquery chamada simplyScroll.
+    Trata-se de um carrossel "infinito" (ele começa na parede da página) em autoloop.
+-->
+
+<!doctype html>
+<html>
+<head>
+
+  <title>JQuery SimplyScroll</title>
+
+  <!-- Jquery SimplyScroll CSS -->
+  <link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.css" />
+
+  <style>
+    body {
+      margin: 0!important;
+      padding: 0!important;
+    }
+    /* Container DIV - automatically generated */
+    .simply-scroll-container { 
+      position: relative;
+    }
+    /* Clip DIV - automatically generated */
+    .simply-scroll-clip { 
+      position: relative;
+      overflow: hidden;
+    }
+    /* UL/OL/DIV - the element that simplyScroll is inited on
+    Class name automatically added to element */
+    .simply-scroll-list { 
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .simply-scroll-list li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .simply-scroll-list li img {
+      border: none;
+      display: block;
+    }
+    /* Custom class modifications - adds to / overrides above
+
+    .simply-scroll is default base class */
+
+    /* Container DIV */
+    .simply-scroll { 
+      width: 100%!important;
+      height: 150px;
+      margin-bottom: 1em;
+    }
+    /* Clip DIV */
+    .simply-scroll .simply-scroll-clip {
+      width: 100%!important;
+      height: 150px;
+    }
+    /* Explicitly set height/width of each list item */ 
+    .simply-scroll .simply-scroll-list li {
+      float: left; /* Horizontal scroll only */
+      width: 290px;
+      height: 150px;
+    }
+    .simply-scroll .simply-scroll-list li {
+      margin-right: 50px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="d-flex flex-column align-items-center justify-content-center" style="height: 665px;">
+        <div class="container-fluid pt-lg-5 pt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <ul id="scroller">
+                        <li><img src="https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1652260957608-927b3320c705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1648737155328-0c0012cf2f20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1652262135789-e6cec614eea5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1648737966316-864c713a8356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1652318969495-4ad0b51d8d68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1648737154448-ccf0cafae1c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1652283829127-3023cde9971f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1638913970961-1946e5ee65c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                        <li><img src="https://images.unsplash.com/photo-1652257975269-e431aa2bdc45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="290" height="150px"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Jquery SimplyScroll Js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+  
+  <script type="text/javascript">
+
+      $("#scroller").simplyScroll({
+        speed: 1,
+        pauseOnHover: false,
+        auto:	true,
+        autoMode:	'loop'
+      });
+
+  </script>
+
+</body>
+</html>
