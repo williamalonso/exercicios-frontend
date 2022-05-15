@@ -16,7 +16,7 @@
         <!-- Swiper CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
 
-        <title>Hello, world!</title>
+        <title>Parallax Carousel</title>
 
         <style> 
             * {
@@ -45,6 +45,44 @@
                 background-size: cover;
                 background-position: center;
             }
+            .parallax-txt-1 {
+                font-size: 80px;
+                font-weight: bold;
+                line-height: 72px;
+                height: 242px;
+                color: #256DBF;
+                letter-spacing: -3.2px;
+                width: 774px;
+            }
+            .parallax-txt-2 {
+                font-size: 18px;
+                line-height: 22px;
+                height: 44px;
+                color: #707070;
+                letter-spacing: 0px;
+                width: 398px;
+            }
+            .parallax-btn-1 {
+                background-color: #256DBF;
+                width: 194px;
+                height: 50px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: #FFFFFF;
+                letter-spacing: 0px;
+                border: none;
+            }
+            .parallax-btn-2 {
+                border: 1px solid #256DBF;
+                border-radius: 6px;
+                opacity: 1;
+                width: 163px;
+                height: 50px;
+                letter-spacing: 0px;
+                color: #256DBF;
+                opacity: 1;
+                font-size: 16px;
+            }
         </style>
    </head>
    <body>
@@ -54,8 +92,14 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-                <div class="slide-inner" style="background-image:url(https://pp.userapi.com/c637331/v637331691/48f5f/spHnV42iYVw.jpg)"></div>
+            <div class="swiper-slide d-flex align-items-center justify-content-center">
+                <div class="slide-inner" style="background-image:url(https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1273&q=80);"></div>
+                <div class="col-10" data-swiper-parallax="-100">
+                    <p class="parallax-txt-1">O futuro da sua empresa com cloud computing</p>
+                    <p class="parallax-txt-2">Soluções de cloud computing completas para transformar sua infraestrutura de TI.</p>
+                    <button class="parallax-btn-1">Simule seu consumo</button>
+                    <button class="parallax-btn-2">Comece GRÁTIS</button>
+                </div>
             </div>
             <div class="swiper-slide">
                 <div class="slide-inner" style="background-image:url(https://pp.userapi.com/c637331/v637331691/48f5f/spHnV42iYVw.jpg)"></div>
