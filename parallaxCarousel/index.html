@@ -28,9 +28,56 @@
                 text-align: center;
                 margin: 30px 0px;
             }
+            .parallax-txt-1 {
+                font-size: 80px;
+                font-weight: bold;
+                line-height: 72px;
+                height: 242px;
+                color: #256DBF;
+                letter-spacing: -3.2px;
+                
+            }
+            .parallax-txt-2 {
+                font-size: 18px;
+                line-height: 22px;
+                height: 44px;
+                color: #707070;
+                letter-spacing: 0px;
+            }
+            .parallax-txt-3 {
+                letter-spacing: 0px;
+                color: #414141;
+                opacity: 1;
+                font-size: 10px;
+                line-height: 12px;
+                width: 172px;
+                color: white;
+                margin-left: 102px;
+            }
+            .parallax-btn-1 {
+                background-color: #256DBF;
+                height: 50px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: #FFFFFF;
+                letter-spacing: 0px;
+                border: none;
+                width: 194px;
+            }
+            .parallax-btn-2 {
+                border: 1px solid #256DBF;
+                border-radius: 6px;
+                opacity: 1;
+                height: 50px;
+                letter-spacing: 0px;
+                color: #256DBF;
+                opacity: 1;
+                font-size: 16px;
+                width: 163px;
+            }
             /* smooth fade effects  */
             .nice-parallax {
-                height: 100vh;
+                height: 90vh;
                 width: 100%;
             }
             .nice-parallax .swiper-slide {
@@ -45,43 +92,66 @@
                 background-size: cover;
                 background-position: center;
             }
-            .parallax-txt-1 {
-                font-size: 80px;
-                font-weight: bold;
-                line-height: 72px;
-                height: 242px;
-                color: #256DBF;
-                letter-spacing: -3.2px;
-                max-width: 774px;
+            /* Medias */
+            @media screen and (max-width:575px) {
+                .parallax-txt-1 {
+                    font-size: 50px;
+                    line-height: 46px;
+                }
+                .parallax-txt-2 {
+                    margin-bottom: 40px;
+                }
+                .parallax-txt-3 {
+                    margin-left: 0px;
+                }
+                .parallax-btn-1 {
+                    margin-bottom: 10px;
+                }
             }
-            .parallax-txt-2 {
-                font-size: 18px;
-                line-height: 22px;
-                height: 44px;
-                color: #707070;
-                letter-spacing: 0px;
-                max-width: 398px;
+            @media screen and (min-width:576px) and (max-width:768px) {
+                .parallax-txt-1 {
+                    font-size: 60px;
+                    line-height: 66px;
+                }
+                .parallax-txt-2 {
+                    margin-bottom: 40px;
+                }
+                .parallax-txt-3 {
+                    margin-left: 184px;
+                }
+                .parallax-btn-1 {
+                    margin-bottom: 10px;
+                }
             }
-            .parallax-btn-1 {
-                background-color: #256DBF;
-                width: 194px;
-                height: 50px;
-                border-radius: 6px;
-                font-size: 16px;
-                color: #FFFFFF;
-                letter-spacing: 0px;
-                border: none;
+            @media screen and (min-width:768px) and (max-width:991px) {
+                .parallax-txt-1 {
+                    font-size: 50px;
+                    line-height: 52px;
+                    padding-top: 37px;
+                    height: 212px;
+                }
+                .parallax-txt-3 {
+                    margin-left: 170px;
+                }
             }
-            .parallax-btn-2 {
-                border: 1px solid #256DBF;
-                border-radius: 6px;
-                opacity: 1;
-                width: 163px;
-                height: 50px;
-                letter-spacing: 0px;
-                color: #256DBF;
-                opacity: 1;
-                font-size: 16px;
+            @media screen and (min-width:992px) and (max-width:1199px) {
+                .parallax-txt-1 {
+                    font-size: 50px;
+                    line-height: 52px;
+                    padding-top: 43px;
+                    height: 212px;
+                }
+                .parallax-txt-3 {
+                    margin-left: 146px;
+                }
+            }
+            @media screen and (min-width:1200px) and (max-width:1399px) {
+                .parallax-txt-1 {
+                    font-size: 60px;
+                }
+                .parallax-txt-3 {
+                    margin-left: 126px;
+                }
             }
         </style>
    </head>
@@ -94,11 +164,14 @@
             <!-- Slides -->
             <div class="swiper-slide d-flex align-items-center justify-content-center flex-wrap">
                 <div class="slide-inner" style="background-image:url(https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1273&q=80);"></div>
-                <div class="col-10" data-swiper-parallax="-100">
-                    <p class="parallax-txt-1">O futuro da sua empresa com cloud computing</p>
-                    <p class="parallax-txt-2">Soluções de cloud computing completas para transformar sua infraestrutura de TI.</p>
-                    <button class="parallax-btn-1">Simule seu consumo</button>
-                    <button class="parallax-btn-2">Comece GRÁTIS</button>
+                <div class="col-10 margin1-carrosel container" data-swiper-parallax="-100">
+                    <div class="col-xxl-6 col-12 col-xl-6 col-lg-6 col-md-8 pt-lg-5"><p class="parallax-txt-1">O futuro da sua empresa com cloud computing</p></div>
+                    <div class="col-xxl-4 col-12 col-lg-6 col-xl-4 col-md-8 pb-xl-4 pb-lg-4"><p class="parallax-txt-2">Soluções de cloud computing completas para transformar sua infraestrutura de TI.</p></div>
+                    <div class="row">
+                        <button class="parallax-btn-1 ms-3">Simule seu consumo</button>
+                        <button class="parallax-btn-2 ms-4">Comece GRÁTIS</button>
+                    </div>
+                    <div class="offset-1 pt-1"><p class="parallax-txt-3">* Aplique o cupom TRIALSITE e ganhe R$500 em crédito</p></div>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -116,7 +189,6 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
- 
  
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
