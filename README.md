@@ -1,5 +1,5 @@
 <h1 align="center">
-    Exercícios de Javascript
+    Exercícios de Javascript e CSS
 </h1>
 
 ---
@@ -10,7 +10,7 @@
 
 ### 🤔 Sobre o projeto?
 
-É um compilado de pequenos exercícios básicos de Javascript para conhecimento e fixação da linguagem.
+É um compilado de pequenos exercícios básicos de Javascript e CSS e algumas bibliotecas que facilitam o dia-a-dia.
 
 ---
 
