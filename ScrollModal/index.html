@@ -1,8 +1,11 @@
 <!-- 
-  Neste exercício foi feito um modal utilizando Bootstrap 5. Neste modal, foi feito um scroll da página no sentido vertical, além de alterar a cor de fundo da página para "rgba(0,0,0,.8)" quando o modal é aberto.
-  Seria feito também um scroll para quando fechar o modal, ele retornar ao botão de acionamento, porém ele já possui esse funcionamento normalmente.
+  Neste exercício foi feito um modal utilizando Bootstrap 5. 
+  
+  Ao abrir o modal, a tela de fundo escurere para "rgba(0,0,0,.8)" e ao fechar volta a cor normal.
 
-  Ao clicar no modal o vídeo é iniciado automaticamente, e quando o modal é fechado, o vídeo é pausado.
+  Ao abrir o modal, rolar a página e fechar o modal, a página volta ao ponto de origem.
+
+  Ao abrir o modal o vídeo é iniciado automaticamente, e quando o modal é fechado, o vídeo é pausado.
 -->
 
 <!doctype html>
@@ -33,7 +36,7 @@
               <h2 class="video-h2">Aqui entra o título</h2>
               <p class="video-p">Aqui entra o subtitulo</p>
               <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-bs-target="#modalId">
-                  <img src="/staticfiles/assets/image/images-compute/seta-button.png" class="img-video-btn">
+                  <img src="img/seta.png" class="img-video-btn">
                   <span class="video-btn-span">Assista agora</span>
               </button>
           </div>
