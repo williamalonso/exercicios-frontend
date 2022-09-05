@@ -1,5 +1,5 @@
 tbody tr {
-    line-height: 8;
+    height: 130px;
 }
 .q-table {
     table-layout: fixed;
@@ -20,20 +20,23 @@ tbody tr {
     line-height: 24px;
     font-size: 20px;
     vertical-align: middle;
-    /* width: 184px; */
+    width: 270px;
 }
 .q-th > div {
     display: flex;
     align-items: center;
+    /* Rotaciona o texto 'th' e o ícone juntos */
     /* transform: matrix(0, -1, 1, 0, 0, 0);
     height: 200px; */
 }
 .q-th > div > span {
     margin-left: 20px;
+    /* Rotaciona o texto 'th' \/ */
     /* transform: matrix(0, -1, 1, 0, 0, 0);
     height: 150px; */
 }
-/* .q-th > div > img {
+/* Rotaciona os ícones \/ */
+/* .q-th > div > img { 
     transform: matrix(0, -1, 1, 0, 0, 0);
 } */
 .q-td {
@@ -44,6 +47,9 @@ tbody tr {
     line-height: 22px;
     font-size: 18px;
     vertical-align: middle;
+}
+.q-td > div {
+    width: 168px;
 }
 @media screen and (min-width:320px) and (max-width:413px) {
     .q-table {
