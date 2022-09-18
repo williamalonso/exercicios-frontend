@@ -21,6 +21,12 @@
         var name = this.value;
         checkLastName(name);
     });
+    ccNumber.addEventListener("keyup", function(){
+        checkCcNumber(this.value);
+    });
+    codeNumber.addEventListener("keyup", function(){
+        checkSecurityCode(this.value);
+    });
     dataDigitada.addEventListener("input", function(){
         checkData(dataDigitada.value);
     });
@@ -57,6 +63,32 @@
         activateButton();
     }
 
+    // check Credit Card Number
+    function checkCcNumber(value) {        
+        if(value) {
+            controlCcNumber = true;
+        } else {
+            controlCcNumber = false;
+        }
+        if(value.length < 1) { // if user let the input empty
+            controlCcNumber = false;
+        }
+        activateButton();
+    }
+
+    // check Security Code
+    function checkSecurityCode(value) {        
+        if(value) {
+            codeNumber = true;
+        } else {
+            codeNumber = false;
+        }
+        if(value.length < 1) { // if user let the input empty
+            codeNumber = false;
+        }
+        activateButton();
+    }
+
     // compare "expiration date" field with current day
     function checkData(data) {
         var separaData = data.split("-"); // separa os valores da data digitada
@@ -71,7 +103,7 @@
 
     // activate/desactivate button
     function activateButton() {
-        if(controlName == true && controlLastName == true && controlDate == true){
+        if(controlName == true && controlLastName == true && controlCcNumber == true && codeNumber == true && controlDate == true){
             btn.disabled = false;
         } else {
             btn.disabled = true;
