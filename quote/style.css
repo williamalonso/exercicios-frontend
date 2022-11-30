@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+/* Pseudo-elemento que adiciona um elemento antes da tag "blockquote" */
+blockquote::before {
+    content: open-quote;
+    font-size: 4em; /* equivalente à 400% */
+}
+
+/* Pseudo-elemento que adiciona um elemento após a tag "blockquote" */
+blockquote::after {
+    content: close-quote;
+    font-size: 4em;
+}
