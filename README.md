@@ -10,7 +10,7 @@
 
 ### 🤔 Sobre o projeto?
 
-É um compilado de exercícios de Javascript e CSS e algumas bibliotecas que facilitam o dia-a-dia.
+É um compilado de exercícios de Javascript e CSS para fixação e aprendizagem.
 
 ---
 
