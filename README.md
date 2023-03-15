@@ -1,5 +1,5 @@
 <h1 align="center">
-    Exercícios de Javascript e CSS
+    Exercícios de Frontend
 </h1>
 
 ---
@@ -10,7 +10,7 @@
 
 ### 🤔 Sobre o projeto?
 
-É um compilado de exercícios de Javascript e CSS para fixação e aprendizagem.
+É um compilado de exercícios de frontend envolvendo Html, Css e Javascript puro.
 
 ---
 
@@ -27,6 +27,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🙅 Instalações e usos
 
+Todos os exercícios podem ser visualizados executando o arquivo `index.html` no seu navegador preferido
 
 Caso queira, clone ou faça o downlod desse repositório:
 
