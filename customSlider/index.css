@@ -1,0 +1,81 @@
+:root {
+  --primaryColor: rgb(18, 173, 238);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.body-content {
+  flex: 1;
+}
+/* navbar */
+.navbar,
+.footer {
+  background-color: #fff;
+  border-bottom: #e8e8e8 2px solid;
+}
+/* Forms */
+.forms-container {
+  padding: 36px;
+}
+.accordion {
+  width: 100%;
+  margin-top: 0;
+}
+.selected {
+  border-bottom: 1px solid rgb(18, 173, 238);
+}
+
+/* Estimativa */
+
+.estimative-h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+.estim-block {
+  width: 80%;
+  margin: 0 auto;
+  padding: 36px;
+}
+.text-estimate {
+  padding-right: 45px;
+  font-size: 14px;
+  color: #1d1d1d;
+  line-height: 19px;
+  margin-top: 40px;
+}
+
+/* Swiper */
+
+.caroussel .swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 23px;
+}
+/* Swiper content */
+.swiper-slide-content {
+  padding: 0;
+  background-color: red;
+  align-items: start;
+}
+.swiper-pagination {
+  visibility: hidden;
+}
