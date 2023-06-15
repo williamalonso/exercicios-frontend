@@ -34,7 +34,14 @@ var thirdCheckbox = `
   </label>
 `;
 
+var fourthCheckbox = `
+  <input type="checkbox" id="checkbox" />
+  <label for="checkbox" class="fourthlabel">
+    <div id="check_mark"></div>
+  </label>
+`;
+
 root.appendChild(label);
-root.insertAdjacentHTML('afterend', secondCheckbox);
-root.insertAdjacentHTML('afterend', '<br>');
-root.insertAdjacentHTML('afterend', thirdCheckbox);
+root.insertAdjacentHTML('beforeend', secondCheckbox);
+root.insertAdjacentHTML('beforeend', thirdCheckbox);
+root.insertAdjacentHTML('beforeend', fourthCheckbox);
