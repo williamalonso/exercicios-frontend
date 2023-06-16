@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.ring {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0px 10px 1px black;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+  color: #262626;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
