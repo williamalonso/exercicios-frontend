@@ -40,8 +40,10 @@
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="btnItem1">
+                <div id="list-example" class="list-group">
+                  <a class="list-group-item list-group-item-action" href="#list-item-1-header">Accordion Item #1</a>
+                </div>
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -54,8 +56,10 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="btnItem2">
+                <div id="list-example" class="list-group">
+                  <a class="list-group-item list-group-item-action" href="#list-item-2-header">Accordion Item #2</a>
+                </div>
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -112,10 +116,14 @@
       </div>
       <div class="col-xxl-7 col-xl-7 col-lg-7 col-12">
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example scrollspy-right" tabindex="0">
+          <h4 id="list-item-1-header">HEADER DO ITEM 1</h4>
+          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
           <h4 id="list-item-1">Item 1</h4>
           <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
           <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
           <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+          <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
+          <h4 id="list-item-2-header">HEADER DO ITEM 2</h4>
           <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
           <h4 id="list-item-2">Item 2</h4>
           <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
@@ -134,7 +142,6 @@
     </div>
 
     <div style="margin-top: 200px;">este e o footer</div>
- 
  
      <!-- Option 1: Bootstrap Bundle with Popper -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -159,6 +166,19 @@
           var target = this.getAttribute('href'); // Obter o destino da rolagem
           scrollToSection(target); // Chamar a função de rolagem suave
         });
+      });
+
+      var btnItem1 = document.getElementById('btnItem1');
+      var btnItem2 = document.getElementById('btnItem2');
+      btnItem1.addEventListener('click', function() {
+        // Altere a URL para a nova URL desejada sem redirecionar
+        var newUrl = 'http://127.0.0.1:5500/item1.html';
+        window.history.pushState({}, '', newUrl);
+      });
+      btnItem2.addEventListener('click', function() {
+        // Altere a URL para a nova URL desejada sem redirecionar
+        var newUrl = 'http://127.0.0.1:5500/item2.html';
+        window.history.pushState({}, '', newUrl);
       });
      </script>
    </body>
