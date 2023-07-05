@@ -1,0 +1,48 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #eaffae;
+  box-sizing: border-box;
+}
+#root {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(229, 83, 83);
+}
+.teste {
+  position: absolute;
+  font-size: 80px;
+  margin-left: 50%;
+  z-index: -9;
+}
+.rightDiv {
+  z-index: 99;
+  background-color: rgb(229, 83, 83);
+  color: #eaffae;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  font-size: 80px;
+  white-space: nowrap;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: start;
+}
+span,
+.rightDivContent {
+  animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+  100% {
+    transform: translateX(-100%);
+  }
+}
