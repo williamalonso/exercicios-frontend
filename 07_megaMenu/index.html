@@ -46,6 +46,50 @@
             .bi-list::before {
                 content: "";
             }
+            .container__navbar--scroll{
+                position:fixed;
+                top:0px;
+                width:100%;
+                -webkit-animation: slide-bottom 1s ease-in-out;
+	            animation: slide-bottom 1s ease-in-out;
+            }
+            .container__navbar--scroll-out{
+                position:fixed;
+                top:-56px;
+                width:100%;
+                -webkit-animation: slide-out 1s ease-out;
+	            animation: slide-out 1s ease-out;
+            }
+            @-webkit-keyframes slide-bottom {
+                0% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(-100%);
+                }
+                100% {
+                    -webkit-transform: translateY(100px);
+                            transform: translateY(0);
+                }
+            }
+            @keyframes slide-bottom {
+                0% {
+                    -webkit-transform: translateY(0);
+                            transform: translateY(-100%);
+                }
+                100% {
+                    -webkit-transform: translateY(100px);
+                            transform: translateY(0);
+                }
+            }
+            @keyframes slide-out {
+                0% {
+                    -webkit-transform: translateY(0px);
+                            transform: translateY(56px);
+                }
+                100% {
+                    -webkit-transform: translateY(0px);
+                            transform: translateY(0px);
+                }
+            }
             @media(max-width: 991.98px) {
                 .hr-infra {
                     display: none;
@@ -55,7 +99,7 @@
  
    </head>
    <body>
-        <div style="background-color: rgba(121, 121, 186, 0.37)">
+        <div id="container__navbar" style="background-color: rgba(121, 121, 186, 0.37);">
             <div class="container">
                 <nav class="navbar navbar-expand-lg " style="background-color: rgba(121, 121, 186, 0.37)">
                     <div class="container-fluid">
@@ -105,6 +149,17 @@
             </div>
         </div>
         <h1 class="mt-5 text-center">Hello, world!</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div>Texto com espaço para scrollar a tela</div>
  
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
