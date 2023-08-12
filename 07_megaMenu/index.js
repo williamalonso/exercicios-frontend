@@ -9,10 +9,8 @@ function exibeBarrinha() {
 
 	    dropdownLink.addEventListener('click', () => {
 	        if (dropdownLink.classList.contains('show')) {
-	            console.log('A classe "show" está presente.');
 	            document.getElementsByClassName("hr-infra")[0].classList.remove("display-none");
 	        } else {
-	            console.log('A classe "show" não está presente.');
 	            document.getElementsByClassName("hr-infra")[0].classList.add("display-none");
 	        }
 	    });
