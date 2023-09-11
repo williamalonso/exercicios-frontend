@@ -45,15 +45,22 @@ var getApi = `
   <section x-data="{
     search: '',
     result: {},
+    isLoading: false,
     doSearch() {
+      this.isLoading = true;
         fetch('https://dummyjson.com/products/search?q=' + this.search)
             .then(res => res.json())
-            .then(json => this.result = json)
+            .then(
+              json => {
+                this.result = json;
+                this.isLoading = false;
+              })
     }
   }">
     <input type="search" x-model="search">
     <button type="button" @click="doSearch()">Pesquisar</button>
     <p style="color: red" x-show="result.products && result.products.length == 0">A pesquisa não encontrou nenhum resultado!</p>
+    <i id="indicator" class="fa-solid fa-spinner fa-spin" x-show="isLoading"></i>
     <template x-if="result.products && result.products.length > 0">
       <span>
         <p x-text="result.products[0].title"></p>
