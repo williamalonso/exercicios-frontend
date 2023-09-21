@@ -17,9 +17,9 @@
 <body>
   <div 
     hx-get="https://dummyjson.com/products/search?q=macbook" 
-    hx-trigger="click" 
     hx-target="#result" 
     hx-indicator="#indicator"
+    onclick="htmx.trigger('htmx:afterRequest', minhaFuncao())"
     hx-swap="innerHTML"
     class="cursor-pointer"
   >
@@ -28,5 +28,10 @@
   <div id="result">
     <i id="indicator" class="htmx-indicator fa-solid fa-spinner fa-spin"></i>
   </div>
+  <script>
+    function minhaFuncao() {
+      alert('chamou :D');
+    }
+  </script>
 </body>
 </html>
