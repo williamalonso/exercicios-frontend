@@ -1,5 +1,5 @@
 <h1 align="center">
-    Exercícios de Frontend
+    Frontend Exercises
 </h1>
 
 ---
@@ -8,15 +8,15 @@
 
 
 
-### 🤔 Sobre o projeto?
+### 🤔 About the Project?
 
-É um compilado de exercícios de frontend envolvendo Html, Css e Javascript puro.
+It is a compilation of front end exercises involving Html, Css and Javascript.
 
 ---
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+This project was develop with the following technologies:
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
@@ -27,14 +27,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ---
 
 
-## 🙅 Instalações e usos
+## 🙅 Facilities and uses
 
-Todos os exercícios podem ser visualizados executando o arquivo `index.html` no seu navegador preferido
+All exercises can be viewed by running the `index.html` file in your preferred browser
 
-Caso queira, clone ou faça o downlod desse repositório:
+If you wish, clone or download this repository:
 
 ```
-# Clone o repositório
+# Clone the repository
 $ git clone git@github.com:williamalonso/exercicios-frontend.git
 ```
 
