@@ -35,7 +35,7 @@ If you wish, clone or download this repository:
 
 ```
 # Clone the repository
-$ git clone git@github.com:williamalonso/exercicios-frontend.git
+$ git clone git@github.com:williamalonso/frontend-exercises.git
 ```
 
 <h3 align="center">William Alonso</h3>
