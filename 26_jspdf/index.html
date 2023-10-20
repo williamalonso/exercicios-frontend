@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-  <script defer src="index.js"></script>
+  <!-- Versão 1 -->
+  <!-- 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script defer src="index.js"></script> 
+  -->
+  <!-- Versão 2 (Melhor opção) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+  <script defer src="versao2.js"></script>
   <title>Biblioteca jsPDF</title>
 </head>
 <body>
 
-  <img src="img.png" id="meuLogo">
+  <img src="amazon.jpg" id="meuLogo" width="100px" height="100px">
 
   <button onclick="createPdf()">Gerar PDF</button>
 
