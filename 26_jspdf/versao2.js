@@ -1,50 +1,78 @@
 const createPdf = () => {
 
-  // Verifique se jsPDF está definido no escopo global
+  // Verify if jsPDF is defined
   if (typeof jsPDF !== "undefined") {
 
     const doc = new jsPDF({
       orientation: "portrait",
       format: 'a4',
+      unit: "mm"
     });
 
-    // Obtenha uma referência ao elemento HTML
-    const HTMLData = document.getElementById('conteudo');
+    // Variables
+    {
 
-    // Obtenha uma referência ao elemento HTML da imagem (ou você pode carregar a imagem de uma URL)
-    const img = document.getElementById('meuLogo'); // Substitua pelo URL da sua imagem
+      // get pdf width and height
+      // var pageWidth = doc.internal.pageSize.getWidth();
+      var pageHeight = doc.internal.pageSize.getHeight();
 
-    // Obtenha o conteúdo de texto do elemento HTML
-    const text = HTMLData.textContent;
-
-    // Define a posição inicial do texto
-    const x = 10;
-    let y = 20;
-
-    // Define a largura máxima permitida para o texto
-    const maxWidth = 190; // Ajuste esse valor conforme necessário
-
-    // Função para inserir o html na página PDF
-    const addTextToPdf = (text) => {
+      // Defines initial text position
+      var x = 10;
+      var y = 20;
       
-      // dividir o texto em várias partes com quebras de linha
-      const splitText = doc.splitTextToSize(text, maxWidth);
+      // Define a largura máxima permitida para o texto
+      var maxWidth = 190; // Ajuste esse valor conforme necessário
 
-      // adiciona o html como texto no documento pdf
-      doc.text(splitText, x, y);
+      // Obtenha uma referência ao elemento HTML
+      var HTMLData = document.getElementById('conteudo');
+  
+      // Obtenha o conteúdo de texto do elemento HTML
+      var HtmlText = HTMLData.textContent;
 
+      // Obtenha uma referência ao elemento HTML da imagem (ou você pode carregar a imagem de uma URL)
+      var img = document.getElementById('meuLogo'); // Substitua pelo URL da sua imagem
     }
 
-    // Função para adicionar uma imagem no início de cada página
-    const addLogoToPdf = () => {
-      doc.addImage(img, 'JPG', 10, 10, 30, 10); // Ajuste as coordenadas e as dimensões conforme necessário
+    // img function
+    {
+      // Função para adicionar uma imagem no início de cada página
+      const addLogoToPdf = () => {
+        doc.addImage(img, 'JPG', 10, 10, 30, 10); // Ajuste as coordenadas e as dimensões conforme necessário
+      }
+  
+      // Função para inserir logo no PDF
+      addLogoToPdf();
     }
 
-    // Função para inserir logo no PDF
-    addLogoToPdf();
-
-    // Chame a função para adicionar o texto ao PDF
-    addTextToPdf(text);
+    // text function
+    {
+      const addNewPage = () => {
+        doc.addPage();
+        y = 10;
+      }
+  
+      // Função para inserir o html na página PDF
+      const addTextToPdf = (text) => {
+      
+        // dividir o texto em várias partes com quebras de linha
+        const splitText = doc.splitTextToSize(text, maxWidth);
+  
+        // Adicione o texto ao PDF em linhas separadas
+        for(const line of splitText) {
+          
+          // Verifique se o texto se encaixa na página atual, se não, cria nova página
+          if( y + 10 > pageHeight ) {
+            addNewPage()
+          }
+          doc.text(line, x, y); // adiciona o html como texto no documento pdf
+          y += 10; // Ajuste o valor de espaço vertical entre as linhas conforme necessário
+        }
+        
+      }
+      
+      // Chame a função para adicionar o texto ao PDF
+      addTextToPdf(HtmlText);
+    }
 
     // Gere a URL do PDF
     const pdfDataUri = doc.output('datauristring');
@@ -56,6 +84,6 @@ const createPdf = () => {
     // doc.save("estimativa.pdf");
 
   } else {
-    console.error("A biblioteca jsPDF não foi carregada corretamente.");
+    console.error("jsPDF lib is not loaded correctly.");
   }
 };
