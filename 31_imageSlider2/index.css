@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider-wrapper .card-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
