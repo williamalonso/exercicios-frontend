@@ -1,16 +1,73 @@
+:root {
+  --background-Page: rgb(42, 42, 185);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-Page);
+}
+
 .slider-wrapper .card-list {
   display: grid;
+  grid-gap: 18px;
   grid-template-columns: repeat(10, 1fr);
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 30px;
+}
+
+.slider-wrapper .card-list::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
   width: 300px;
   height: 300px;
   border: 1px solid black;
+}
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 4px;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  border-radius: inherit;
+  cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute; 
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
 }
