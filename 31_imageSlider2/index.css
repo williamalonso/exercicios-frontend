@@ -41,33 +41,3 @@ body {
   display: flex;
   align-items: center;
 }
-
-.slider-scrollbar .scrollbar-track {
-  height: 2px;
-  width: 100%;
-  background-color: #ccc;
-  position: relative;
-  border-radius: 4px;
-}
-
-.slider-scrollbar:hover .scrollbar-track {
-  height: 4px;
-}
-
-.slider-scrollbar .scrollbar-thumb {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  background-color: black;
-  border-radius: inherit;
-  cursor: grab;
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-  content: "";
-  position: absolute; 
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
-}
