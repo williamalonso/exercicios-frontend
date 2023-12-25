@@ -16,6 +16,10 @@ body {
   background-color: var(--background-Page);
 }
 
+.slider-wrapper {
+  position: relative;
+}
+
 .slider-wrapper .card-list {
   display: grid;
   grid-gap: 18px;
@@ -40,4 +44,34 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+/* Slide Buttons */
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #000;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  z-index: 2;
+}
+
+#prev-slide {
+  left: -20px;
+}
+
+#next-slide {
+  right: -20px;
+}
+
+.slider-wrapper .slide-button:hover {
+  background-color: #444;
 }
