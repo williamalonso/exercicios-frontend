@@ -1,3 +1,4 @@
+/* Customizing the scrollbar */
 .slider-scrollbar .scrollbar-track {
   height: 2px;
   width: 100%;
@@ -7,10 +8,12 @@
   border-radius: 4px;
 }
 
+/* Increase all the scrollbar height when hovering it */
 .slider-scrollbar:hover .scrollbar-track {
   height: 4px;
 }
 
+/* The thumb we can scroll */
 .slider-scrollbar .scrollbar-thumb {
   position: absolute;
   height: 100%;
@@ -20,12 +23,14 @@
   cursor: grab;
 }
 
+/* Increase only thumb size when we click on it */
 .slider-scrollbar .scrollbar-thumb:active {
   cursor: grabbing;
   height: 8px;
   top: -2px;
 }
 
+/* Increase the thumb area we can grab */
 .slider-scrollbar .scrollbar-thumb::after {
   content: "";
   position: absolute; 
