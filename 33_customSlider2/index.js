@@ -18,10 +18,6 @@ const slideForm = (item) => {
   
   const itemId = item.id;
   const formList = document.querySelector(".left-content .slider-form-container");
-  const cardList = document.querySelector(".tab-header .slider-item-container");
-  const rect = item.getBoundingClientRect();
-  const cardMidpoint = rect.left + rect.width / 2;
-  const containerMidpoint = cardList.getBoundingClientRect().left + cardList.offsetWidth / 2;
   const index = parseInt(itemId.split('-').pop(), 10);
   const formWidth = getFormWidth();
 
