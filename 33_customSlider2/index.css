@@ -7,23 +7,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightslategrey;
+  background-color: #f5f5f5;
 }
 
 .slider-item {
-  width: 150px;
   border: 1px solid black;
+}
+
+.slider-item,
+.slider-form-item {
+  width: 150px;
   cursor: pointer;
 }
 
 .slide-button-arrow {
   cursor: pointer;
+  color: rgb(18, 173, 238);
 }
 
+.slider-form-container,
 .slider-item-container {
   width: 500px;
 }
 
+.slider-form-container::-webkit-scrollbar,
 .slider-item-container::-webkit-scrollbar {
   display: none;
 }

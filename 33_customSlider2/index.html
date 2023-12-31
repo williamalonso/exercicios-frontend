@@ -34,7 +34,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: darkblue;
         min-height: 90vh;
         height: auto;
       "
@@ -42,7 +41,7 @@
       <div 
         class="left-content col"
         style="
-          background-color: blueviolet;
+          background-color: #fff;
           display: flex;
           justify-content: start;
           align-items: start;
@@ -51,6 +50,7 @@
           height: 100%;
           margin: 0 auto;
           width: 100%;
+          max-width: 700px;
         "
       >
         <div
@@ -58,10 +58,11 @@
           style="
             position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             margin: 0 auto;
             margin-bottom: 20px;
+            width: 100%;
           "
         >
           <div class="slide-button-arrow" id="prev-slide">
@@ -75,7 +76,6 @@
               display: grid;
               grid-gap: 18px;
               grid-template-columns: repeat(10, 1fr);
-              
               overflow-x: auto;
             "
           >
@@ -97,38 +97,52 @@
           </div>
         </div>
         <div
+          class="slider-form-container"
           style="
-            background-color: red;
+            display: grid;
+            grid-gap: 18px;
+            grid-template-columns: repeat(10, 1fr);
+            background-color: #9a9a9a;;
             width: 100%;
             height: auto;
+            margin-top: 50px;
+            overflow-x: auto;
           "
         >
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
-          <p>Aqui vai o form</p>
+          <div class="slider-form-item">Aqui vai o form 1</div>
+          <div class="slider-form-item">Aqui vai o form 2</div>
+          <div class="slider-form-item">Aqui vai o form 3</div>
+          <div class="slider-form-item">Aqui vai o form 4</div>
+          <div class="slider-form-item">Aqui vai o form 5</div>
+          <div class="slider-form-item">Aqui vai o form 6</div>
+          <div class="slider-form-item">Aqui vai o form 7</div>
+          <div class="slider-form-item">Aqui vai o form 8</div>
+          <div class="slider-form-item">Aqui vai o form 9</div>
+          <div class="slider-form-item">Aqui vai o form 10</div>
         </div>
       </div>
       <div 
         class="right-content col"
         style="
-          background-color: darksalmon;
+          background-color: #fafafa;
           display: flex;
           justify-content: center;
-          align-items: center;
+          align-items: start;
           height: 100%;
           min-height: 90vh;
+          max-width: 700px;
         "
       >
-        Minha estimativa
+        <span
+          style="
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(18, 173, 238);
+            margin-top: 50px;
+          "
+        >
+          Estimativa
+        </span>
       </div>
      </div>
   
