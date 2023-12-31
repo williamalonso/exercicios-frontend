@@ -1,44 +1,37 @@
-const slideForm = (item) => {
+const getFormWidth  = () => {
+  // Obtém o elemento com a classe "slider-form-container"
+  const sliderFormContainer = document.querySelector('.slider-form-container');
 
+  // Obtém o valor da propriedade grid-template-columns
+  const gridColumnValue = window.getComputedStyle(sliderFormContainer).getPropertyValue('grid-template-columns');
+
+  // Divide a string para obter uma matriz de valores
+  const columnValues = gridColumnValue.split(' ');
+
+  // Obtém o valor da primeira coluna
+  const firstColumnValue = parseInt(columnValues[0], 10);
+
+  return firstColumnValue;
+}
+
+const slideForm = (item) => {
+  
+  const itemId = item.id;
   const formList = document.querySelector(".left-content .slider-form-container");
   const cardList = document.querySelector(".tab-header .slider-item-container");
-  const itemId = item.id;
   const rect = item.getBoundingClientRect();
   const cardMidpoint = rect.left + rect.width / 2;
   const containerMidpoint = cardList.getBoundingClientRect().left + cardList.offsetWidth / 2;
-  const direction = cardMidpoint < containerMidpoint ? -1 : 1;
   const index = parseInt(itemId.split('-').pop(), 10);
-  const scrollAmount = 700 * index * direction;
+  const formWidth = getFormWidth();
 
-  switch (itemId) {
-    case 'slider-item-1':
-      formList.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
-      break;
+  // Calcula a posição do item em relação ao início do .slider-form-container
+  const itemPosition = (index - 1) * formWidth;
 
-    case 'slider-item-2':
-      formList.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
-      break;
-
-    case 'slider-item-3':
-      formList.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
-      break;
-    
-    case 'slider-item-4':
-      formList.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
-      break;
-  }
+  formList.scrollTo({
+    left: itemPosition,
+    behavior: "smooth"
+  });
 }
 
 const initSlider = () => {

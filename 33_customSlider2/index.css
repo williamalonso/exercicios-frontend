@@ -94,6 +94,11 @@ body {
   overflow-x: auto;
 }
 
+.slider-form-content {
+  width: 100%;
+  text-align: center;
+}
+
 .slider-item-container {
   width: 500px;
 }
