@@ -85,7 +85,6 @@ body {
 
 .slider-form-container {
   display: grid;
-  grid-gap: 18px;
   grid-template-columns: repeat(10, 700px);
   background-color: #9a9a9a;
   width: 100%;

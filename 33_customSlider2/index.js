@@ -1,3 +1,46 @@
+const slideForm = (item) => {
+
+  const formList = document.querySelector(".left-content .slider-form-container");
+  const cardList = document.querySelector(".tab-header .slider-item-container");
+  const itemId = item.id;
+  const rect = item.getBoundingClientRect();
+  const cardMidpoint = rect.left + rect.width / 2;
+  const containerMidpoint = cardList.getBoundingClientRect().left + cardList.offsetWidth / 2;
+  const direction = cardMidpoint < containerMidpoint ? -1 : 1;
+  const index = parseInt(itemId.split('-').pop(), 10);
+  const scrollAmount = 700 * index * direction;
+
+  switch (itemId) {
+    case 'slider-item-1':
+      formList.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+      break;
+
+    case 'slider-item-2':
+      formList.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+      break;
+
+    case 'slider-item-3':
+      formList.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+      break;
+    
+    case 'slider-item-4':
+      formList.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+      break;
+  }
+}
+
 const initSlider = () => {
   
   const cardList = document.querySelector(".tab-header .slider-item-container");
@@ -26,6 +69,7 @@ const initSlider = () => {
         left: scrollAmount,
         behavior: "smooth"
       });
+      slideForm(item);
     })
   })
 
