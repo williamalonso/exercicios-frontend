@@ -3,6 +3,7 @@ const initSlider = () => {
   const cardList = document.querySelector(".slider-wrapper .card-list");
   const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
   const cardItem = document.querySelectorAll(".slider-wrapper .card");
+  const maxScrollLeft = cardList.scrollWidth - cardList.clientWidth;
 
   slideButtons.forEach( button => {
     button.addEventListener("click", () => {
@@ -44,6 +45,27 @@ const initSlider = () => {
       });
     });
   });
+
+
+  const handleSlideButtons = () => {
+
+    if(cardList.scrollLeft > 0) {
+      slideButtons[0].classList.remove('sliderbutton--hover');
+    } else {
+      slideButtons[0].classList.add('sliderbutton--hover');
+    }
+
+    if(cardList.scrollLeft >= maxScrollLeft) {
+      slideButtons[1].classList.add('sliderbutton--hover');
+    } else {
+      slideButtons[1].classList.remove('sliderbutton--hover');
+    }
+    
+  }
+
+  cardList.addEventListener("scroll", () => {
+    handleSlideButtons();
+  })
 
 }
 
