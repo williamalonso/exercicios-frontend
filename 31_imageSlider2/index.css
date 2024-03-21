@@ -75,3 +75,7 @@ body {
 .slider-wrapper .slide-button:hover {
   background-color: #444;
 }
+
+.slider-wrapper .sliderbutton--hover {
+  background-color: #444;
+}
