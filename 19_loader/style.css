@@ -1,12 +1,20 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .center {
   top: 50%;
   left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+  color: #262626;
   position: absolute;
   transform: translate(-50%, -50%);
 }
@@ -27,13 +35,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.text {
-  top: 50%;
-  left: 50%;
-  font-size: 2em;
-  color: #262626;
-  position: absolute;
-  transform: translate(-50%, -50%);
 }
