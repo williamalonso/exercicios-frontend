@@ -1,9 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   height: 100vh;
-  padding: 0;
-  margin: 0;
   background-color: #eaffae;
-  box-sizing: border-box;
 }
 #root {
   display: flex;
@@ -16,7 +18,7 @@ body {
   white-space: nowrap;
   color: rgb(229, 83, 83);
 }
-.teste {
+.leftContent {
   position: absolute;
   font-size: 80px;
   margin-left: 50%;
