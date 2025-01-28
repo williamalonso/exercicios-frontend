@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Menu Com Classe Ativa</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="main-head">
+        <h1>LOGO</h1>
+        <nav class="nav">
+          <ul>
+            <li class="links"><a href="#home">Home</a></li>
+            <li class="links"><a href="#sobre">Sobre</a></li>
+            <li class="links"><a href="#servicos">Serviços</a></li>
+            <li class="links"><a href="#preco">Preço</a></li>
+            <li class="links"><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section id="home">
+    <h2>Home</h2>
+  </section>
+  <section id="sobre">
+    <h2>Sobre</h2>
+  </section>
+  <section id="servicos">
+    <h2>Serviços</h2>
+  </section>
+  <section id="preco">
+    <h2>Preço</h2>
+  </section>
+  <section id="contato">
+    <h2>Contato</h2>
+  </section>
+  <script>
+
+    const li = document.querySelectorAll('.links');
+    const section = document.querySelectorAll('section');
+    const header = document.querySelector('.header'); // Seleciona o elemento Header
+
+    function activeMenu() {
+      
+      let menuIndex = section.length;
+
+      while (menuIndex > 0) {
+
+        menuIndex = menuIndex - 1; // Decrementa o índice manualmente
+        
+        // Declara variáveis para a condição.
+        const headerHeight = header.offsetHeight; // Obtém a altura do Header
+        const scrollPosition = window.scrollY + headerHeight; // Altura que foi rolado verticalmente + altura do Header/Navbar.
+        const sectionPosition = section[menuIndex].offsetTop; // Posição do corpo da seção.
+        
+        // Verifica se o scroll já alcançou a seção.
+        if (scrollPosition >= sectionPosition) {
+          break; // Sai do laço quando a condição é satisfeita.
+        }
+      }
+      li.forEach(ltx => ltx.classList.remove('active'));
+      li[menuIndex].classList.add('active');
+    }
+    activeMenu();
+    window.addEventListener('scroll', activeMenu);
+  </script>
+</body>
+</html>
