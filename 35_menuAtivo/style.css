@@ -10,11 +10,12 @@ body {
 }
 header {
   padding: 30px 20px;
-  background: #ececec;
+  background: #001524;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 99;
+  color: #FFFFFF;
 }
 .main-head {
   display: flex;
@@ -32,10 +33,11 @@ nav li {
   padding: 5px;
   transition: all linear 0.5s;
   margin-right: 20px;
+  border-radius: 10px;
 }
 nav li a {
   text-decoration: none;
-  color: #000;
+  color: #FFFFFF;;
   font-weight: 500;
   padding: 5px;
 }
@@ -75,7 +77,8 @@ section h2 {
               url('_img/img5.jpg') no-repeat center center/cover;
 }
 .active {
-  background: orange;
+  background: #3498DB;
   display: inline-block;
   padding: 5px;
+  border-radius: 10px;
 }
